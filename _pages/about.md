@@ -5,7 +5,6 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
-  - /index.html
 ---
 Hi and welcome to my peronsal research site! Feel free to explore the links at the top to learn more about my work and background, access my resume and CV, visit my other sites, or see some code examples. Test.
 
