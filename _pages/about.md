@@ -1,11 +1,19 @@
 ---
 permalink: /
-title: "academicpages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Aaron Stahl's Personal Research Homepage"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+  - /index.html
 ---
+Hi and welcome to my peronsal research site! Feel free to explore the links at the top to learn more about my work and background, access my resume and CV, visit my other sites, or see some code examples.
+
+Current status
+======
+In March 2024, I defended my Ph.D. dissertation in physics at [Georgia Institute of Technology](https://grad.gatech.edu/events/phd-defense-aaron-stahl). My thesis explores magnetospheric plasma physics at Jupiter's moon, Ganymede, using sophisticated computational models of the moon's interaction with the Jovian magnetosphere. I have also published peer-reviewed articles on electron radiation belts at Ganymede, as well as the plasma dynamics of Jupiter's moon, Europa, during its encounter with the Juno spacecraft in 2022.
+
+I'm currently working as a research scientist at Georgia Tech with the Magnetospheres in the Outer Solar system group of the School of Earth and Atmospheric Sciences.
 
 This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
 
