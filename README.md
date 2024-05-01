@@ -1,1 +1,1 @@
-This is my personal homepage and container for basic information about my research background and links to my sites. This site design is based on the Academic Pages (https://github.com/academicpages), which is itself based on the Minimal Mistakes Jekyll Theme.
+This is my personal homepage and a container for basic information about my research and professional background, as well as links to my other sites. This page design is based on [Academic Pages](https://github.com/academicpages), which is itself based on the Minimal Mistakes Jekyll Theme.
