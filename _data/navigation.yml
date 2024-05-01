@@ -3,6 +3,9 @@ main:
   - title: "Research Areas"
     url: /research_areas/
 
+  - title: "Code Tutorials"
+    url: /code_tutorials/
+
   - title: "Resume & CV"
     url: /cv/
     
