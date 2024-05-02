@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Aaron Stahl / Personal Homepage"
+title                    : "Aaron Stahl / Homepage"
 title_separator          : "-"
 name                     : &name "Aaron Stahl"
 description              : &description "Contact information, background, CVs, sample codes, ..."
