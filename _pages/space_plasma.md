@@ -14,7 +14,7 @@ Questions concerning celestial bodies and their potential for life, operational 
  
 To begin, we can characterize the behavior of space plasma in our solar system through the time evolution of the particle distribution function in a six-dimensional phase space \\(f_s(\mathbf{x},\mathbf{v},t)\\), where \\(f_s\\) is the average particle number density of species \\(s\\) with velocity \\(\mathbf{v}\\) at position \\(\mathbf{x}\\) and time \\(t\\). Starting from \\(f_s(\mathbf{x},\mathbf{v},t)\\) and assuming that no particles are created or destroyed (\\(\frac{\mathrm{d}f_s}{\mathrm{d}t}=0\\)), a straightforward application of the Lorentz force and Newton's second law yields the collision-free form of Boltzmann's equation, also known as Vlasov's equation (for further reference, see "Space Plasma Physics" by Baumjohann and Treumann, 2022):
 
-$$\frac{\partial f_s}{\partial t} + \mathbf{v} \boldsymbol{\cdot} \frac{\partial f_s}{\partial \mathbf{x}} + \frac{q_s}{m_s} \left( \mathbf{E} + \mathbf{v} \times \mathbf{B} \right) \boldsymbol{\cdot} \frac{\partial f_s}{\partial \mathbf{v}} = 0 \hspace{0.4cm} . \label{eq:vlasov}$$
+\begin{equation}\frac{\partial f_s}{\partial t} + \mathbf{v} \boldsymbol{\cdot} \frac{\partial f_s}{\partial \mathbf{x}} + \frac{q_s}{m_s} \left( \mathbf{E} + \mathbf{v} \times \mathbf{B} \right) \boldsymbol{\cdot} \frac{\partial f_s}{\partial \mathbf{v}} = 0 \hspace{0.4cm} . \label{eq:vlasov}\end{equation}
 
 In this expression, \\(q_s\\) is the particle charge, \\(m_s\\) is the particle mass, \\(\mathbf{E}\\) is the electric field, and \\(\mathbf{B}\\) is the magnetic field. 
 
@@ -24,7 +24,7 @@ While Vlasov's equation describes the dynamics of a non-collisional plasma popul
 # The velocity moments of distribution function
 To generate these variables, we can integrate the product of the distribution function of each plasma species \\(f_s\\) with the velocity \\(\mathbf{v}^{k}\\) raised to integer powers of \\(k\\) over all of the three-dimensional velocity space:
 
-$$M_{k,s} = \int_{}^{} \mathrm{d}^{3}v \; f_s(\mathbf{x}, \mathbf{v}, t) \; \mathbf{v}^{k}\hspace{0.4cm} . \label{eq:moments}$$
+\begin{equation}\label{eq:moments}M_{k,s} = \int_{}^{} \mathrm{d}^{3}v \; f_s(\mathbf{x}, \mathbf{v}, t) \; \mathbf{v}^{k}\hspace{0.4cm} .\end{equation}
 
 In this expression, \\(M_{k,s}\\) is the \\(k^{\mathrm{th}}\\) statistical velocity moment of the distribution function for species \\(s\\). The "zeroth" moment (\\(k=0\\)) is thus the simple integral of the distribution function over all of velocity space, which intuitively yields the number density \\(n_{s}(\mathbf{x},t)\\) of species \\(s\\) at location \\(\mathbf{x}\\) and time \\(t\\). Evaluation of the first order moment \\(M_{1,s}\\) is similarly straightforward and gives the product of the number density and the average velocity, or "bulk" plasma flow \\(\mathbf{u}_{s}(\mathbf{x},t)\\):
 
