@@ -13,9 +13,9 @@ Questions concerning celestial bodies and their potential for life, operational 
  __Mathematical Introduction__
 To begin, we can characterize the behavior of space plasma in our solar system through the time evolution of the particle distribution function in a six-dimensional phase space \\(f_s(\mathbf{x},\mathbf{v},t)\\), where \\(f_s\\) is the average particle number density of species \\(s\\) with velocity \\(\mathbf{v}\\) at position \\(\mathbf{x}\\) and time \\(t\\). Starting from \\(f_s(\mathbf{x},\mathbf{v},t)\\) and assuming that no particles are created or destroyed (\\(\frac{\mathrm{d}f_s}{\mathrm{d}t}=0\\)), a straightforward application of the Lorentz force and Newton's second law yields the collision-free form of Boltzmann's equation, also known as Vlasov's equation (see also, "Space Plasma Physics" by  Baumjohann and Treumann, 2022):
 
-$$
+\begin{equation}
 \frac{\partial f_s}{\partial t} + \mathbf{v} \boldsymbol{\cdot} \frac{\partial f_s}{\partial \mathbf{x}} + \frac{q_s}{m_s} \left( \mathbf{E} + \mathbf{v} \times \mathbf{B} \right) \boldsymbol{\cdot} \frac{\partial f_s}{\partial \mathbf{v}} = 0 \hspace{0.4cm} .
-$$
+\end{equation}
 
 In this expression, \\(q_s\\) is the particle charge, \\(m_s\\) is the particle mass, \\(\mathbf{E}\\) is the electric field, and \\(\mathbf{B}\\) is the magnetic field. 
 
@@ -53,8 +53,6 @@ $$
 Using the moments of the distribution function, \\(f_{s}(\mathbf{x}, t)\\) can be replaced with the macroscopic variables to arrive at a fluid picture. Taking the zeroth moment (\\(k=0\\)) of Vlasov's equation yields a continuity equation, which states that in order to increase (decrease) the number density, a source (sink) is required to transport mass to (from) the respective location:
 
 $$
-\begin{equation}
-\label{eq:continuity}
 \frac{\partial n_s}{\partial t} + \nabla \boldsymbol{\cdot} (n_s \, \mathbf{u}_s) = 0 \hspace{0.4cm} .
 $$
 
@@ -66,8 +64,7 @@ $$
 The resulting relation, known as the equation of motion in its non-conservative form, notably contains the second moment of the distribution function, the pressure tensor \\(\boldsymbol{P}_s\\). In general, the \\(k^{th}\\) moment of Vlasov's equation contains the \\((k+1)^{th}\\) moment of the distribution function, and so closing the system inherently requires making an approximation for the highest order velocity moment retained. The plasma in Ganymede's interaction region is adiabatic to reasonable approximation (e.g., (Jia et al. 2008)[https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2007JA012748], conveniently permitting the adoption of a scalar pressure to close the system:
  
 $$
-P_s = P_{s,0} \left( \frac{n_s}{n_{s,0}} \right) ^{\kappa} \hspace{0.4cm} ,
-\end{equation}
+P_s = P_{s,0} \left( \frac{n_s}{n_{s,0}} \right) ^{\kappa} \hspace{0.4cm} , \label{eq:pressure}
 $$
 
 In this relation, \\(\kappa=\frac{f+2}{f}\\), where \\(f\\) is the degrees of freedom. In a vacuum with no fields, this value would be set to \\(\kappa=\frac{5}{3}\\) for a monatomic plasma species or electrons, where \\(f=3\\) corresponds to three translational degrees of freedom. However, this value is typically set to \\(\kappa=2\\) in order to reflect the reduced degrees of freedom (\\(f=2\\)) imposed by the magnetic field \\(\mathbf{B}\\). Additionally, \\(n_{s,0}\\) and \\(P_0\\) are the empirically determined ``background" pressure and number density, respectively, for the undisturbed plasma. 
