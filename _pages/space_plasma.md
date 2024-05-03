@@ -37,12 +37,10 @@ In this expression, \\(M_{k,s}\\) is the \\(k^{\mathrm{th}}\\) statistical veloc
 \begin{equation}
 \label{eq:zeroth_mom}
 M_{0,s} = n_{s}(\mathbf{x},t) = \int_{}^{} \mathrm{d}^{3}v \; f_s(\mathbf{x}, \mathbf{v}, t)
-\end{equation}
 
 \begin{equation}
 \label{eq:first_mom}
-M_{1,s} = n_{s}(\mathbf{x},t) \mathbf{u}_{s}(\mathbf{x},t) = \int_{}^{} \mathrm{d}^{3}v \; f_s(\mathbf{x}, \mathbf{v}, t) \; \mathbf{v} \hspace{0.4cm}.
-\end{equation}
+M_{1,s} = n_{s}(\mathbf{x},t) \mathbf{u}_{s}(\mathbf{x},t) = \int_{}^{} \mathrm{d}^{3}v \; f_s(\mathbf{x}, \mathbf{v}, t) \; \mathbf{v}\end{equation}
 
 From these two macroscopic quantities, we can also define another useful physical parameter, the current density \\(\mathbf{j}(\mathbf{x},t)\\):
 
