@@ -37,10 +37,12 @@ In this expression, \\(M_{k,s}\\) is the \\(k^{\mathrm{th}}\\) statistical veloc
 \begin{equation}
 \label{eq:zeroth_mom}
 M_{0,s} = n_{s}(\mathbf{x},t) = \int_{}^{} \mathrm{d}^{3}v \; f_s(\mathbf{x}, \mathbf{v}, t)
+\end{equation}
 
 \begin{equation}
 \label{eq:first_mom}
-M_{1,s} = n_{s}(\mathbf{x},t) \mathbf{u}_{s}(\mathbf{x},t) = \int_{}^{} \mathrm{d}^{3}v \; f_s(\mathbf{x}, \mathbf{v}, t) \; \mathbf{v}\end{equation}
+M_{1,s} = n_{s}(\mathbf{x},t) \mathbf{u}_{s}(\mathbf{x},t) = \int_{}^{} \mathrm{d}^{3}v \; f_s(\mathbf{x}, \mathbf{v}, t) \; \mathbf{v}
+\end{equation}
 
 From these two macroscopic quantities, we can also define another useful physical parameter, the current density \\(\mathbf{j}(\mathbf{x},t)\\):
 
@@ -56,7 +58,7 @@ The expressions for higher order moments of the distribution function (\\(k \geq
 M_{2,s} = \boldsymbol{P}_{s}(\mathbf{x},t) = m_s \int_{}^{} \mathrm{d}^{3}v \; f_s(\mathbf{x}, \mathbf{v}, t) \; (\mathbf{v}-\mathbf{u}_s) \boldsymbol{\otimes} (\mathbf{v}-\mathbf{u}_s) \hspace{0.4cm} .
 \end{equation}
 
-Revisiting Vlasov's equation (\ref{eq:vlasov}) equipped with the relationship between these macroscopic quantities and the distribution function, we can now construct a single fluid (magnetohydrodynamic) or multi-fluid picture for characterizing plasma dynamics. As with the distribution function, the product of Vlasov's equation and velocity \\(\mathbf{v}^k\\) raised to integer powers of \\(k\\) can be integrated over velocity space to obtain equations of state that are independent of the velocity:
+Revisiting Vlasov's equation equipped with the relationship between these macroscopic quantities and the distribution function, we can now construct a single fluid (magnetohydrodynamic) or multi-fluid picture for characterizing plasma dynamics. As with the distribution function, the product of Vlasov's equation and velocity \\(\mathbf{v}^k\\) raised to integer powers of \\(k\\) can be integrated over velocity space to obtain equations of state that are independent of the velocity:
 
 \begin{equation}
 \label{eq:vlasov_moments}
@@ -70,7 +72,7 @@ Using the moments of the distribution function, \\(f_{s}(\mathbf{x}, t)\\) can b
 \frac{\partial n_s}{\partial t} + \nabla \boldsymbol{\cdot} (n_s \, \mathbf{u}_s) = 0 \hspace{0.4cm} .
 \end{equation}
 
-This expression for mass continuity contains four unknowns, including the first moment of the distribution function \\(\mathbf{u}_s\\), and therefore requires higher order moments to solve for \\(\mathbf{u}_s\\). Evaluating the first moment (\\(k=1\\)) of \ref{eq:vlasov} and combining it with the continuity equation gives the equation of motion for each species and provides a differential expression for the bulk velocity:
+This expression for mass continuity contains four unknowns, including the first moment of the distribution function \\(\mathbf{u}_s\\), and therefore requires higher order moments to solve for \\(\mathbf{u}_s\\). Evaluating the first moment (\\(k=1\\)) of Vlasov's equation and combining it with the continuity equation gives the equation of motion for each species and provides a differential expression for the bulk velocity:
 
 \begin{equation}
 \label{eq:vlasov_zeroth}
