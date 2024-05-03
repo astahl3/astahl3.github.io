@@ -41,7 +41,7 @@ M_{0,s} = n_{s}(\mathbf{x},t) = \int_{}^{} \mathrm{d}^{3}v \; f_s(\mathbf{x}, \m
 
 \begin{equation}
 \label{eq:first_mom}
-M_{1,s} = n_{s}(\mathbf{x},t) \mathbf{u}_{s}(\mathbf{x},t) = \int_{}^{} \mathrm{d}^{3}v \; f_s(\mathbf{x}, \mathbf{v}, t) \; \mathbf{v} \hspace{0.4cm} .
+M_{1,s} = n_{s}(\mathbf{x},t) \mathbf{u}_{s}(\mathbf{x},t) = \int_{}^{} \mathrm{d}^{3}v \; f_s(\mathbf{x}, \mathbf{v}, t) \; \mathbf{v} \hspace{0.4cm}.
 \end{equation}
 
 From these two macroscopic quantities, we can also define another useful physical parameter, the current density \\(\mathbf{j}(\mathbf{x},t)\\):
@@ -54,14 +54,14 @@ From these two macroscopic quantities, we can also define another useful physica
 The expressions for higher order moments of the distribution function (\\(k \geq 2\\)) are not singularly defined. For example, when solving the second order moment (\\(k=2\\)), the term \\(\mathbf{v}^{2}\\) can represented as either \\((\mathbf{v} \boldsymbol{\cdot} \mathbf{v})\\) or \\((\mathbf{v} \boldsymbol{\otimes} \mathbf{v})\\), where (\\(\boldsymbol{\cdot}\\)) and (\\(\boldsymbol{\otimes}\\)) correspond to the inner (dot) and outer (Kronecker or tensor) products, respectively. Applying the inner product and substituting \\((\mathbf{v}-\mathbf{u}_{s})\\) for the velocity provides the "kinetic" temperature, a measure of the spread of the distribution function in velocity space about the average velocity \\(\mathbf{u}_s\\). An analogous treatment for the outer product case yields the pressure tensor (the mass \\(m_s\\) of species \\(s\\) is required in this expression to obtain the correct units of pressure):
 
 \begin{equation}
-\label{eq:secondMom}
+\label{eq:second_mom}
 M_{2,s} = \boldsymbol{P}_{s}(\mathbf{x},t) = m_s \int_{}^{} \mathrm{d}^{3}v \; f_s(\mathbf{x}, \mathbf{v}, t) \; (\mathbf{v}-\mathbf{u}_s) \boldsymbol{\otimes} (\mathbf{v}-\mathbf{u}_s) \hspace{0.4cm} .
 \end{equation}
 
 Revisiting Vlasov's equation (\ref{eq:vlasov}) equipped with the relationship between these macroscopic quantities and the distribution function, we can now construct a single fluid (magnetohydrodynamic) or multi-fluid picture for characterizing plasma dynamics. As with the distribution function, the product of Vlasov's equation and velocity \\(\mathbf{v}^k\\) raised to integer powers of \\(k\\) can be integrated over velocity space to obtain equations of state that are independent of the velocity:
 
 \begin{equation}
-\label{eq:vlasovMoments}
+\label{eq:vlasov_moments}
 \int_{}^{} \mathrm{d}^{3}v \left[ \frac{\partial f_s}{\partial t} + \mathbf{v} \boldsymbol{\cdot} \frac{\partial f_s}{\partial \mathbf{x}} + \frac{q_s}{m_s} \left( \mathbf{E} + \mathbf{v} \times \mathbf{B} \right) \boldsymbol{\cdot} \frac{\partial f_s}{\partial \mathbf{v}} \right] \mathbf{v}^{k} = 0 \hspace{0.4cm} .
 \end{equation}
 
@@ -79,7 +79,7 @@ This expression for mass continuity contains four unknowns, including the first 
 n_s \, \frac{\mathrm{d} \mathbf{u}_s}{\mathrm{d}t} = \frac{-\nabla \boldsymbol{\cdot} \boldsymbol{P_s}}{m_s} + \frac{n_s q_s}{m_s} \left[ \mathbf{E}+\mathbf{u}_s \boldsymbol{\times} \mathbf{B} \right] \hspace{0.4cm} .
 \end{equation}
 
-The resulting relation, known as the equation of motion in its non-conservative form, notably contains the second moment of the distribution function, the pressure tensor \\(\boldsymbol{P}_s\\). In general, the \\(k^{th}\\) moment of Vlasov's equation contains the \\((k+1)^{th}\\) moment of the distribution function, and so closing the system inherently requires making an approximation for the highest order velocity moment retained. The plasma in Ganymede's interaction region is adiabatic to reasonable approximation, e.g., (Jia et al. 2008)[https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2007JA012748], conveniently permitting the adoption of a scalar pressure to close the system:
+The resulting relation, known as the equation of motion in its non-conservative form, notably contains the second moment of the distribution function, the pressure tensor \\(\boldsymbol{P}_s\\). In general, the \\(k^{th}\\) moment of Vlasov's equation contains the \\((k+1)^{th}\\) moment of the distribution function, and so closing the system inherently requires making an approximation for the highest order velocity moment retained. The plasma in Ganymede's interaction region is adiabatic to reasonable approximation, e.g., [Jia et al. 2008](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2007JA012748), conveniently permitting the adoption of a scalar pressure to close the system:
  
 \begin{equation}
 \label{eq:pressure}
@@ -93,4 +93,4 @@ The Adaptive Ion Kinetic Electron Fluid (AIKEF) Hybrid Model
 
 __Motivations for hybrid model__
 
-At Ganymede, ion gyroradii in the Jovian magnetospheric background field are at most about 0.2 \\(R_G\\), which is small compared to the scale of the interaction region (10s of Ganymede radii, e.g., see \cite{Jia2021}). Because the gyroradius of a charged particle is proportional to its mass, electron gyroradii are at least three orders of magnitude smaller than for ions under similar conditions. As a result, models that employ a fluid treatment for both ions and electrons have produced reasonable approximations of Ganymede's global magnetospheric structure and plasma interaction (e.g., Duling et al., 2014). However, the magnetic field magnitude near Ganymede can fall to just a few nT in several localized regions (e.g., near the upstream magnetopause, where the magnetic fields of Ganymede and Jupiter are antiparallel and approximately equal in strength). Ions in these regions can possess gyroradii that are comparable in size to the interaction region and therefore require kinetic treatment to resolve. On the other hand, electron gyroradii remain small and thus conducive to a fluid approach. A hybrid model (kinetic ions, fluid electrons) may therefore be required to fully characterize the plasma dynamics of Ganymede's interaction with the Jovian magnetosphere.
+At Ganymede, ion gyroradii in the Jovian magnetospheric background field are at most about 0.2 \\(R_G\\), which is small compared to the scale of the interaction region (10s of Ganymede radii, e.g., see \cite{Jia2021}). Because the gyroradius of a charged particle is proportional to its mass, electron gyroradii are at least three orders of magnitude smaller than for ions under similar conditions. As a result, models that employ a fluid treatment for both ions and electrons have produced reasonable approximations of Ganymede's global magnetospheric structure and plasma interaction (e.g., [Duling et al., 2014](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022GL101688)). However, the magnetic field magnitude near Ganymede can fall to just a few nT in several localized regions (e.g., near the upstream magnetopause, where the magnetic fields of Ganymede and Jupiter are antiparallel and approximately equal in strength). Ions in these regions can possess gyroradii that are comparable in size to the interaction region and therefore require kinetic treatment to resolve. On the other hand, electron gyroradii remain small and thus conducive to a fluid approach. A hybrid model (kinetic ions, fluid electrons) may therefore be required to fully characterize the plasma dynamics of Ganymede's interaction with the Jovian magnetosphere.
