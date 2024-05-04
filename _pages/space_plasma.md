@@ -12,7 +12,7 @@ Questions concerning celestial bodies and their potential for life, operational 
  
  __Mathematical Introduction__
  
-To begin, we can characterize the behavior of space plasma in our solar system through the time evolution of the particle distribution function in a six-dimensional phase space \\(f\_s(\mathbf{x},\mathbf{v},t)\\), where \\(f\_s\\) is the average particle number density of species \\(s\\) with velocity \\(\mathbf{v}\\) at position \\(\mathbf{x}\\) and time \\(t\\). Starting from \\(f\_s(\mathbf{x},\mathbf{v},t)\\) and assuming that no particles are created or destroyed (\\(\frac{\mathrm{d}f\_s}{\mathrm{d}t}=0\\)), a straightforward application of the Lorentz force and Newton's second law yields the collision-free form of Boltzmann's equation, also known as Vlasov's equation (for further reference, see "Space Plasma Physics" by Baumjohann and Treumann, 2022):
+We can characterize the behavior of space plasma in our solar system through the time evolution of a particle distribution function in a six-dimensional phase space \\(f\_s(\mathbf{x},\mathbf{v},t)\\), where \\(f\_s\\) is the average particle number density of species \\(s\\) with velocity \\(\mathbf{v}\\) at position \\(\mathbf{x}\\) and time \\(t\\). Starting from \\(f\_s(\mathbf{x},\mathbf{v},t)\\) and assuming that no particles are created or destroyed (\\(\frac{\mathrm{d}f\_s}{\mathrm{d}t}=0\\)), a straightforward application of the Lorentz force and Newton's second law yields the collision-free form of Boltzmann's equation, also known as Vlasov's equation (for further reference, see "Space Plasma Physics" by Baumjohann and Treumann, 2022):
 
 \begin{equation}
 \frac{\partial f\_s}{\partial t} + \mathbf{v} \boldsymbol{\cdot} \frac{\partial f\_s}{\partial \mathbf{x}} + \frac{q\_s}{m\_s} \left( \mathbf{E} + \mathbf{v} \times \mathbf{B} \right) \boldsymbol{\cdot} \frac{\partial f\_s}{\partial \mathbf{v}} = 0 \hspace{0.4cm}.
@@ -65,4 +65,24 @@ The Adaptive Ion Kinetic Electron Fluid (AIKEF) Hybrid Model
 
 __Motivations for hybrid model__
 
-At Ganymede, ion gyroradii in the Jovian magnetospheric background field are at most about 0.2 \\(R\_G\\), which is small compared to the scale of the interaction region (10s of Ganymede radii, e.g., see \cite{Jia2021}). Because the gyroradius of a charged particle is proportional to its mass, electron gyroradii are at least three orders of magnitude smaller than for ions under similar conditions. As a result, models that employ a fluid treatment for both ions and electrons have produced reasonable approximations of Ganymede's global magnetospheric structure and plasma interaction (e.g., [Duling et al., 2014](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022GL101688)). However, the magnetic field magnitude near Ganymede can fall to just a few nT in several localized regions (e.g., near the upstream magnetopause, where the magnetic fields of Ganymede and Jupiter are antiparallel and approximately equal in strength). Ions in these regions can possess gyroradii that are comparable in size to the interaction region and therefore require kinetic treatment to resolve. On the other hand, electron gyroradii remain small and thus conducive to a fluid approach. A hybrid model (kinetic ions, fluid electrons) may therefore be required to fully characterize the plasma dynamics of Ganymede's interaction with the Jovian magnetosphere.
+At Ganymede, ion gyroradii in the Jovian magnetospheric background field are at most about 0.2 \\(R\_G\\), which is small compared to the scale of the interaction region (10s of Ganymede radii, e.g., see [Jia and Kivelson 2021](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/9781119815624.ch35)). Because the gyroradius of a charged particle is proportional to its mass, electron gyroradii are at least three orders of magnitude smaller than for ions under similar conditions. As a result, models that employ a fluid treatment for both ions and electrons have produced reasonable approximations of Ganymede's global magnetospheric structure and plasma interaction (e.g., [Duling et al., 2014](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022GL101688)). However, the magnetic field magnitude near Ganymede can fall to just a few nT in several expansive regions within its mini-magnetosphere (e.g., near the upstream magnetopause, where the magnetic fields of Ganymede and Jupiter are antiparallel and approximately equal in strength). Ions in these regions can possess gyroradii that are comparable in size to the interaction region and therefore require a fully kinetic treatment to resolve. On the other hand, electron gyroradii remain small and thus conducive to a fluid approach. A hybrid model (kinetic ions, fluid electrons) may therefore be required to fully characterize the plasma dynamics of Ganymede's interaction with the Jovian magnetosphere.
+
+\begin{equation}
+\begin{split}
+\label{eq:aikef}
+\frac{\mathrm{d}\mathbf{x}\_j}{\mathrm{d}t}=\mathbf{v}\_j \hspace{0.5cm} \mathrm{and} \hspace{0.5cm} \frac{\mathrm{d}\mathbf{v}\_j}{\mathrm{d}t}=\frac{e}{m\_j}(\mathbf{E}+\mathbf{v}\_j \times \mathbf{B}) \hspace{1cm} \mathrm{(a)}
+\\
+\\
+n\_e m\_e \frac{\mathrm{d}\mathbf{u}\_e}{\mathrm{d}t} = e n\_e (\mathbf{E}+\mathbf{u}\_e \times \mathbf{B}) - \nabla P\_e = 0 \hspace{1cm} \mathrm{(b)}
+\\
+\\
+\mathbf{E} = -\mathbf{u}\_i \times \mathbf{B} + \frac{(\nabla \times \mathbf{B}) \times \mathbf{B}}{\mu\_0 e n\_i } - \frac{\nabla P\_e}{e n\_i} \hspace{1cm} \mathrm{(c)}
+\\
+\\
+\frac{\partial \mathbf{B}}{\partial t} = \nabla \times (\mathbf{u}\_i \times \mathbf{B}) - \nabla \times \left[ \frac{(\nabla \times \mathbf{B}) \times \mathbf{B}}{\mu\_0 e n\_i} \right] \hspace{1cm} \mathrm{(d)}
+\\
+\\
+P\_e = P\_{e,0} \left( \frac{\rho\_\mathrm{C}}{\rho\_{\mathrm{C},0}} \right)^{\kappa} \hspace{1cm} \mathrm{(e)}
+%\mathbf{E} = -\mathbf{u} \times \mathbf{B} + \frac{\mathbf{j} \times \mathbf{B}}{e\,n} - \frac{\nabla \boldsymbol{\cdot} \boldsymbol{P}\_{e}}{e\,n} + \left( \frac{m\_e}{e^2 \, n} \right) \frac{\partial \mathbf{j}}{\partial t}
+\end{split}
+\end{equation}
