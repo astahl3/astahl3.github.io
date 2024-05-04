@@ -54,7 +54,7 @@ This expression for mass continuity contains four unknowns, including the first 
 
 \begin{equation}n\_s \, \frac{\mathrm{d} \mathbf{u}\_s}{\mathrm{d}t} = \frac{-\nabla \boldsymbol{\cdot} \boldsymbol{P\_s}}{m\_s} + \frac{n\_s q\_s}{m\_s} \left[ \mathbf{E}+\mathbf{u}\_s \boldsymbol{\times} \mathbf{B} \right] \hspace{0.4cm}.\end{equation}
 
-The resulting relation, known as the equation of motion in its non-conservative form, notably contains the second moment of the distribution function, the pressure tensor \\(\boldsymbol{P}\_s\\). In general, the \\(k^{th}\\) moment of Vlasov's equation contains the \\((k+1)^{th}\\) moment of the distribution function, and so closing the system inherently requires making an approximation for the highest order velocity moment retained. The plasma in Ganymede's interaction region is adiabatic to reasonable approximation, e.g., [Jia et al. 2008](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2007JA012748), conveniently permitting the adoption of a scalar pressure to close the system:
+The resulting relation, known as the equation of motion in its non-conservative form, notably contains the second moment of the distribution function, the pressure tensor \\(\boldsymbol{P}\_s\\). In general, the \\(k^{th}\\) moment of Vlasov's equation contains the \\((k+1)^{th}\\) moment of the distribution function, and so closing the system inherently requires making an approximation for the highest order velocity moment retained. The plasma in Ganymede's interaction region is adiabatic to reasonable approximation, e.g., [Jia et al., 2008](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2007JA012748), conveniently permitting the adoption of a scalar pressure to close the system:
  
 \begin{equation}P\_s = P\_{s,0} \left( \frac{n\_s}{n\_{s,0}} \right) ^{\kappa} \hspace{0.4cm}.\end{equation}
 
@@ -65,24 +65,24 @@ The Adaptive Ion Kinetic Electron Fluid (AIKEF) Hybrid Model
 
 __Motivations for hybrid model__
 
-At Ganymede, ion gyroradii in the Jovian magnetospheric background field are at most about 0.2 \\(R\_G\\), which is small compared to the scale of the interaction region (10s of Ganymede radii, e.g., see [Jia and Kivelson 2021](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/9781119815624.ch35)). Because the gyroradius of a charged particle is proportional to its mass, electron gyroradii are at least three orders of magnitude smaller than for ions under similar conditions. As a result, models that employ a fluid treatment for both ions and electrons have produced reasonable approximations of Ganymede's global magnetospheric structure and plasma interaction (e.g., [Duling et al., 2014](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022GL101688)). However, the magnetic field magnitude near Ganymede can fall to just a few nT in several expansive regions within its mini-magnetosphere (e.g., near the upstream magnetopause, where the magnetic fields of Ganymede and Jupiter are antiparallel and approximately equal in strength). Ions in these regions can possess gyroradii that are comparable in size to the interaction region and therefore require a fully kinetic treatment to resolve. On the other hand, electron gyroradii remain small and thus conducive to a fluid approach. A hybrid model (kinetic ions, fluid electrons) may therefore be required to fully characterize the plasma dynamics of Ganymede's interaction with the Jovian magnetosphere.
+At Ganymede, ion gyroradii in the Jovian magnetospheric background field are at most about 0.2 \\(R\_G\\), which is small compared to the scale of the interaction region (10s of Ganymede radii, e.g., see [Jia and Kivelson, 2021](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/9781119815624.ch35)). Because the gyroradius of a charged particle is proportional to its mass, electron gyroradii are at least three orders of magnitude smaller than for ions under similar conditions. As a result, models that employ a fluid treatment for both ions and electrons have produced reasonable approximations of Ganymede's global magnetospheric structure and plasma interaction (e.g., [Duling et al., 2014](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022GL101688)). However, the magnetic field magnitude near Ganymede can fall to just a few nT in several expansive regions within its mini-magnetosphere (e.g., near the upstream magnetopause, where the magnetic fields of Ganymede and Jupiter are antiparallel and approximately equal in strength). Ions in these regions can possess gyroradii that are comparable in size to the interaction region and therefore require a fully kinetic treatment to resolve. On the other hand, electron gyroradii remain small and thus conducive to a fluid approach. A hybrid model (kinetic ions, fluid electrons) may therefore be required to fully characterize the plasma dynamics of Ganymede's interaction with the Jovian magnetosphere.
 
 \begin{equation}
-\begin{split}
-\label{eq:aikef}
 \frac{\mathrm{d}\mathbf{x}\_j}{\mathrm{d}t}=\mathbf{v}\_j \hspace{0.5cm} \mathrm{and} \hspace{0.5cm} \frac{\mathrm{d}\mathbf{v}\_j}{\mathrm{d}t}=\frac{e}{m\_j}(\mathbf{E}+\mathbf{v}\_j \times \mathbf{B}) \hspace{1cm} \mathrm{(a)}
-\\
-\\
+\end{equation}
+
+\begin{equation}
 n\_e m\_e \frac{\mathrm{d}\mathbf{u}\_e}{\mathrm{d}t} = e n\_e (\mathbf{E}+\mathbf{u}\_e \times \mathbf{B}) - \nabla P\_e = 0 \hspace{1cm} \mathrm{(b)}
-\\
-\\
+\end{equation}
+
+\begin{equation}
 \mathbf{E} = -\mathbf{u}\_i \times \mathbf{B} + \frac{(\nabla \times \mathbf{B}) \times \mathbf{B}}{\mu\_0 e n\_i } - \frac{\nabla P\_e}{e n\_i} \hspace{1cm} \mathrm{(c)}
-\\
-\\
+\end{equation}
+
+\begin{equation}
 \frac{\partial \mathbf{B}}{\partial t} = \nabla \times (\mathbf{u}\_i \times \mathbf{B}) - \nabla \times \left[ \frac{(\nabla \times \mathbf{B}) \times \mathbf{B}}{\mu\_0 e n\_i} \right] \hspace{1cm} \mathrm{(d)}
-\\
-\\
+\end{equation}
+
+\begin{equation}
 P\_e = P\_{e,0} \left( \frac{\rho\_\mathrm{C}}{\rho\_{\mathrm{C},0}} \right)^{\kappa} \hspace{1cm} \mathrm{(e)}
-%\mathbf{E} = -\mathbf{u} \times \mathbf{B} + \frac{\mathbf{j} \times \mathbf{B}}{e\,n} - \frac{\nabla \boldsymbol{\cdot} \boldsymbol{P}\_{e}}{e\,n} + \left( \frac{m\_e}{e^2 \, n} \right) \frac{\partial \mathbf{j}}{\partial t}
-\end{split}
 \end{equation}
