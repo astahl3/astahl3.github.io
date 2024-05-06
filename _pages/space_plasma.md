@@ -16,9 +16,6 @@ Ganymede
 
 **Results:** Many of my findings on this topic are included in the journal article, [A Model of Ganymede's Magnetic and Plasma Environment During the Juno PJ34 Flyby](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023JA032113). Below, I highlight a the most interesting results. 
 
-![AIKEF: Kelvin-Helmholtz Instability along Sub-Jovian Magnetopause Flank](/images/example.jpg)
-*Propagation of a Kelvin-Helmholtz wave along the sub-Jovian flank of Ganymede's magnetopause. *
-
 Our results include the first demonstration of Kelvin-Helmholtz instability forming along Ganymede's Jupiter-facing magnetopause flank. The movie above, which displays the  shows how linear Kelvin-Helmholtz waves form and propagate in the direction of ambient Jovian plasma. 
 
 <link rel="stylesheet"
@@ -256,7 +253,7 @@ input[type=range].anim-slider {
     var frames = new Array(103);
     
   for (var i=0; i<103; i++){
-    frames[i] = "s0_rho_Z_cross-section_frames/frame" + ("0000000" + i).slice(-7) +
+    frames[i] = "../files/khi_anim/frame" + ("0000000" + i).slice(-7) +
                 ".png";
   }
 
