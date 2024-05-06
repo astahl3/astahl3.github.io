@@ -14,15 +14,14 @@ Ganymede
 
 **Programming:** To understand Ganymede's plasma interaction during Juno's flyby, I modeled the moon and its environment in C++ starting from the **A**daptive **I**on **K**inetic **E**lectron **F**luid source code (AIKEF, see [Müller et al., 2011](https://www.sciencedirect.com/science/article/pii/S0010465510005266)). I programmed a three-dimensional model of Ganymede's ionosphere and integrated this into the existing AIKEF source code, resulting in the first self-consistent model of Ganymede's multi-species plasma tail. I also added extensive functionality to AIKEF to accommodate Ganymede's unique features, including its intrinsically generated global magnetic field. In addition, I performed extensive statistical analysis on Juno's magnetometer and plasma observations (e.g., minimum variance analysis) to look for signatures of magnetic reconnection at Ganymede's magnetopause and to map the structure of the moon's global magnetic topology.
 
-**Results:** Many of my findings on this topic are included in the journal article, [A Model of Ganymede's Magnetic and Plasma Environment During the Juno PJ34 Flyby](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023JA032113). Below, I highlight a the most interesting results. 
+**Results:** My research results on this topic are largely summarized in the journal article, [A Model of Ganymede's Magnetic and Plasma Environment During the Juno PJ34 Flyby](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023JA032113). Below, I highlight some of the interesting findings. 
 
-Our results include the first demonstration of Kelvin-Helmholtz instability forming along Ganymede's Jupiter-facing magnetopause flank. The movie above, which displays the  shows how linear Kelvin-Helmholtz waves form and propagate in the direction of ambient Jovian plasma. 
+Our results include the first model demonstration of Kelvin-Helmholtz instability (KHI) forming along Ganymede's Jupiter-facing magnetopause flank. Asymmetric KHI along the moon's magnetopause was proposed in a recent study using an analytical 2-D framework (see [Kaweeyanun et al., 2021](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021JA029338)), and is confirmed by our model results. Moreover, the formation of linear Kelvin-Helmholtz waves can be seen propagating toward downstream in the movie of the Jovian plasma density below, which displays the emergence of this phenomena and the resulting turbulence along the boundary layer.
 
-<figure>
-    <img src="../files/khi_anim/khi_med.gif" alt="Kelvin-Helmholtz Instability at Ganymede">
-    <figcaption>Normalized Jovian plasma density \\(\frac{n\_\mathrm{J}}{n\_0}\\), showing the asymmetric development of Kelvin-Helmholtz instability along the Jupiter-facing flank. The \\(y\\) axis points toward Jupiter and the \\(x\\) axis points in the direction of the Jovian plasma flow. </figcaption>
-</figure>
+![Kelvin-Helmholtz Instability at Ganymede](../files/khi_anim/khi_crop.gif)
+*Normalized Jovian plasma density \\(\frac{n\_\mathrm{s0}}{n\_0}\\) in the equatorial (\\(z=0\\)) plane, showing the asymmetric development of Kelvin-Helmholtz instability along the Jupiter-facing (\\(y>0\\)) flank. The \\(y\\) axis points toward Jupiter and the \\(x\\) axis points in the direction of the Jovian plasma flow, with both axes given in units of Ganymede radii (\\(R\_\mathrm{G}=2,634.1\\) km).*
 
+As seen in the figure, the conditions for KHI are not satisfied along the Jupiter-averted \\(y>0)\\) magnetopause flank, resulting in a comparably smooth profile in the \\(y<0\\) half-space. KHI is an important mechanism for the transport of matter and energy between planetary magnetospheres and the surrounding space, and likely serves a similar function at Ganymede. However, additional research is required to characterize its global significance at Ganymede.
 
 Radation Belts at Ganymede
 ======
