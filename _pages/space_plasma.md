@@ -240,7 +240,7 @@ input[type=range].anim-slider {
     if (!this.timer) this.timer = setInterval(function() {
         t.anim_step_reverse();
     }, this.interval);
-  }  
+  }
 
   /* Instantiate the Animation class. */
   /* The IDs given should match those used in the template above. */
