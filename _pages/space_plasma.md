@@ -21,73 +21,6 @@ Our results include the first demonstration of Kelvin-Helmholtz instability form
 <link rel="stylesheet"
 href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-<style>
-.animation {
-    display: inline-block;
-    text-align: center;
-}
-input[type=range].anim-slider {
-    width: 374px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.anim-buttons {
-    margin: 8px 0px;
-}
-.anim-buttons button {
-    padding: 0;
-    width: 36px;
-}
-.anim-state label {
-    margin-right: 8px;
-}
-.anim-state input {
-    margin: 0;
-    vertical-align: middle;
-}
-</style>
-
-<div class="animation">
-  <img id="_anim_imgfa36777bc3a2452f97f38f5050d9f389">
-  <div class="anim-controls">
-    <input id="_anim_sliderfa36777bc3a2452f97f38f5050d9f389" type="range" class="anim-slider"
-           name="points" min="0" max="1" step="1" value="0"
-           oninput="animfa36777bc3a2452f97f38f5050d9f389.set_frame(parseInt(this.value));">
-    <div class="anim-buttons">
-      <button title="Decrease speed" aria-label="Decrease speed" onclick="animfa36777bc3a2452f97f38f5050d9f389.slower()">
-          <i class="fa fa-minus"></i></button>
-      <button title="First frame" aria-label="First frame" onclick="animfa36777bc3a2452f97f38f5050d9f389.first_frame()">
-        <i class="fa fa-fast-backward"></i></button>
-      <button title="Previous frame" aria-label="Previous frame" onclick="animfa36777bc3a2452f97f38f5050d9f389.previous_frame()">
-          <i class="fa fa-step-backward"></i></button>
-      <button title="Play backwards" aria-label="Play backwards" onclick="animfa36777bc3a2452f97f38f5050d9f389.reverse_animation()">
-          <i class="fa fa-play fa-flip-horizontal"></i></button>
-      <button title="Pause" aria-label="Pause" onclick="animfa36777bc3a2452f97f38f5050d9f389.pause_animation()">
-          <i class="fa fa-pause"></i></button>
-      <button title="Play" aria-label="Play" onclick="animfa36777bc3a2452f97f38f5050d9f389.play_animation()">
-          <i class="fa fa-play"></i></button>
-      <button title="Next frame" aria-label="Next frame" onclick="animfa36777bc3a2452f97f38f5050d9f389.next_frame()">
-          <i class="fa fa-step-forward"></i></button>
-      <button title="Last frame" aria-label="Last frame" onclick="animfa36777bc3a2452f97f38f5050d9f389.last_frame()">
-          <i class="fa fa-fast-forward"></i></button>
-      <button title="Increase speed" aria-label="Increase speed" onclick="animfa36777bc3a2452f97f38f5050d9f389.faster()">
-          <i class="fa fa-plus"></i></button>
-    </div>
-    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_selectfa36777bc3a2452f97f38f5050d9f389"
-          class="anim-state">
-      <input type="radio" name="state" value="once" id="_anim_radio1_fa36777bc3a2452f97f38f5050d9f389"
-             >
-      <label for="_anim_radio1_fa36777bc3a2452f97f38f5050d9f389">Once</label>
-      <input type="radio" name="state" value="loop" id="_anim_radio2_fa36777bc3a2452f97f38f5050d9f389"
-             checked>
-      <label for="_anim_radio2_fa36777bc3a2452f97f38f5050d9f389">Loop</label>
-      <input type="radio" name="state" value="reflect" id="_anim_radio3_fa36777bc3a2452f97f38f5050d9f389"
-             >
-      <label for="_anim_radio3_fa36777bc3a2452f97f38f5050d9f389">Reflect</label>
-    </form>
-  </div>
-</div>
-
 <script language="javascript">
   function isInternetExplorer() {
     ua = navigator.userAgent;
@@ -243,6 +176,73 @@ input[type=range].anim-slider {
   }
 </script>
 
+<style>
+.animation {
+    display: inline-block;
+    text-align: center;
+}
+input[type=range].anim-slider {
+    width: 374px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.anim-buttons {
+    margin: 8px 0px;
+}
+.anim-buttons button {
+    padding: 0;
+    width: 36px;
+}
+.anim-state label {
+    margin-right: 8px;
+}
+.anim-state input {
+    margin: 0;
+    vertical-align: middle;
+}
+</style>
+
+<div class="animation">
+  <img id="_anim_imgfa36777bc3a2452f97f38f5050d9f389">
+  <div class="anim-controls">
+    <input id="_anim_sliderfa36777bc3a2452f97f38f5050d9f389" type="range" class="anim-slider"
+           name="points" min="0" max="1" step="1" value="0"
+           oninput="animfa36777bc3a2452f97f38f5050d9f389.set_frame(parseInt(this.value));">
+    <div class="anim-buttons">
+      <button title="Decrease speed" aria-label="Decrease speed" onclick="animfa36777bc3a2452f97f38f5050d9f389.slower()">
+          <i class="fa fa-minus"></i></button>
+      <button title="First frame" aria-label="First frame" onclick="animfa36777bc3a2452f97f38f5050d9f389.first_frame()">
+        <i class="fa fa-fast-backward"></i></button>
+      <button title="Previous frame" aria-label="Previous frame" onclick="animfa36777bc3a2452f97f38f5050d9f389.previous_frame()">
+          <i class="fa fa-step-backward"></i></button>
+      <button title="Play backwards" aria-label="Play backwards" onclick="animfa36777bc3a2452f97f38f5050d9f389.reverse_animation()">
+          <i class="fa fa-play fa-flip-horizontal"></i></button>
+      <button title="Pause" aria-label="Pause" onclick="animfa36777bc3a2452f97f38f5050d9f389.pause_animation()">
+          <i class="fa fa-pause"></i></button>
+      <button title="Play" aria-label="Play" onclick="animfa36777bc3a2452f97f38f5050d9f389.play_animation()">
+          <i class="fa fa-play"></i></button>
+      <button title="Next frame" aria-label="Next frame" onclick="animfa36777bc3a2452f97f38f5050d9f389.next_frame()">
+          <i class="fa fa-step-forward"></i></button>
+      <button title="Last frame" aria-label="Last frame" onclick="animfa36777bc3a2452f97f38f5050d9f389.last_frame()">
+          <i class="fa fa-fast-forward"></i></button>
+      <button title="Increase speed" aria-label="Increase speed" onclick="animfa36777bc3a2452f97f38f5050d9f389.faster()">
+          <i class="fa fa-plus"></i></button>
+    </div>
+    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_selectfa36777bc3a2452f97f38f5050d9f389"
+          class="anim-state">
+      <input type="radio" name="state" value="once" id="_anim_radio1_fa36777bc3a2452f97f38f5050d9f389"
+             >
+      <label for="_anim_radio1_fa36777bc3a2452f97f38f5050d9f389">Once</label>
+      <input type="radio" name="state" value="loop" id="_anim_radio2_fa36777bc3a2452f97f38f5050d9f389"
+             checked>
+      <label for="_anim_radio2_fa36777bc3a2452f97f38f5050d9f389">Loop</label>
+      <input type="radio" name="state" value="reflect" id="_anim_radio3_fa36777bc3a2452f97f38f5050d9f389"
+             >
+      <label for="_anim_radio3_fa36777bc3a2452f97f38f5050d9f389">Reflect</label>
+    </form>
+  </div>
+</div>
+
 <script language="javascript">
   /* Instantiate the Animation class. */
   /* The IDs given should match those used in the template above. */
@@ -266,6 +266,8 @@ input[type=range].anim-slider {
     }, 0);
   })()
 </script>
+
+Test image load: <img src="../files/khi_anim/frame0000001.png" alt="test image">
 
 Radation Belts at Ganymede
 ======
