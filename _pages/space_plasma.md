@@ -28,8 +28,8 @@ href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.cs
     return ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
   }
 
-  /* Define the Animation class */
-  function Animation(frames, img_id, slider_id, interval, loop_select_id){
+  /* Define the custAnimation class */
+  function custAnimation(frames, img_id, slider_id, interval, loop_select_id){
     this.img_id = img_id;
     this.slider_id = slider_id;
     this.loop_select_id = loop_select_id;
@@ -56,7 +56,7 @@ href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.cs
     this.set_frame(this.current_frame);
   }
 
-  Animation.prototype.get_loop_state = function(){
+  custAnimation.prototype.get_loop_state = function(){
     var button_group = document[this.loop_select_id].state;
     for (var i = 0; i < button_group.length; i++) {
         var button = button_group[i];
@@ -67,48 +67,48 @@ href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.cs
     return undefined;
   }
 
-  Animation.prototype.set_frame = function(frame){
+  custAnimation.prototype.set_frame = function(frame){
     this.current_frame = frame;
     document.getElementById(this.img_id).src =
             this.frames[this.current_frame].src;
     document.getElementById(this.slider_id).value = this.current_frame;
   }
 
-  Animation.prototype.next_frame = function()
+  custAnimation.prototype.next_frame = function()
   {
     this.set_frame(Math.min(this.frames.length - 1, this.current_frame + 1));
   }
 
-  Animation.prototype.previous_frame = function()
+  custAnimation.prototype.previous_frame = function()
   {
     this.set_frame(Math.max(0, this.current_frame - 1));
   }
 
-  Animation.prototype.first_frame = function()
+  custAnimation.prototype.first_frame = function()
   {
     this.set_frame(0);
   }
 
-  Animation.prototype.last_frame = function()
+  custAnimation.prototype.last_frame = function()
   {
     this.set_frame(this.frames.length - 1);
   }
 
-  Animation.prototype.slower = function()
+  custAnimation.prototype.slower = function()
   {
     this.interval /= 0.7;
     if(this.direction > 0){this.play_animation();}
     else if(this.direction < 0){this.reverse_animation();}
   }
 
-  Animation.prototype.faster = function()
+  custAnimation.prototype.faster = function()
   {
     this.interval *= 0.7;
     if(this.direction > 0){this.play_animation();}
     else if(this.direction < 0){this.reverse_animation();}
   }
 
-  Animation.prototype.anim_step_forward = function()
+  custAnimation.prototype.anim_step_forward = function()
   {
     this.current_frame += 1;
     if(this.current_frame < this.frames.length){
@@ -127,7 +127,7 @@ href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.cs
     }
   }
 
-  Animation.prototype.anim_step_reverse = function()
+  custAnimation.prototype.anim_step_reverse = function()
   {
     this.current_frame -= 1;
     if(this.current_frame >= 0){
@@ -146,7 +146,7 @@ href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.cs
     }
   }
 
-  Animation.prototype.pause_animation = function()
+  custAnimation.prototype.pause_animation = function()
   {
     this.direction = 0;
     if (this.timer){
@@ -155,7 +155,7 @@ href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.cs
     }
   }
 
-  Animation.prototype.play_animation = function()
+  custAnimation.prototype.play_animation = function()
   {
     this.pause_animation();
     this.direction = 1;
@@ -165,7 +165,7 @@ href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.cs
     }, this.interval);
   }
 
-  Animation.prototype.reverse_animation = function()
+  custAnimation.prototype.reverse_animation = function()
   {
     this.pause_animation();
     this.direction = -1;
@@ -261,7 +261,7 @@ input[type=range].anim-slider {
     /* set a timeout to make sure all the above elements are created before
        the object is initialized. */
     setTimeout(function() {
-        animfa36777bc3a2452f97f38f5050d9f389 = new Animation(frames, img_id, slider_id, 200.0,
+        animfa36777bc3a2452f97f38f5050d9f389 = new custAnimation(frames, img_id, slider_id, 200.0,
                                  loop_select_id);
     }, 0);
   })()
