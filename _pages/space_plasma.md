@@ -18,6 +18,8 @@ Ganymede
 
 Our results include the first demonstration of Kelvin-Helmholtz instability forming along Ganymede's Jupiter-facing magnetopause flank. The movie above, which displays the  shows how linear Kelvin-Helmholtz waves form and propagate in the direction of ambient Jovian plasma. 
 
+{% include khi_anim.html %}
+
 Test image load: <img src="../files/khi_anim/frame0000001.png" alt="test image">
 
 Radation Belts at Ganymede
