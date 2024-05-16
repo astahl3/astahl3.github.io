@@ -12,6 +12,6 @@ Please select one of the links below to learn more about my work in a particular
 
 [Computational space physics](space_plasma.md)
 
-Computational quantum physics (forthcoming)
+[Computational quantum physics](quantum_completion.md)
 
 Idea classification (forthcoming)
