@@ -8,9 +8,9 @@ redirect_from:
 ---
 Greetings and welcome to my personal research site! I'm currently working as a research affiliate at Georgia Tech, where I collaborate with the [Magnetospheres in the Outer Solar System](https://svensimon.gatech.edu/) research group and Professor Sven Simon to study space plasma physics within our solar system. 
 
-Owing to an earlier bachelor's degree in finance from the University of Southern California and a few years of work experience within the investment management sector, I'm also exploring how I can apply my technical background and AI to solve practical, interesting problems in investing and portfolio management. I'm a deeply curious person with broad research interests spanning quantum physics, space physics, and finance. Most generally, I enjoy building models of dynamical systems and large datasets to make sense of how the world works.
+Owing to an earlier bachelor's degree in finance from the University of Southern California and a few years of work experience within the investment management sector, I'm also exploring how I can apply my technical background and AI to solve practical, interesting problems in investing and portfolio management. I'm a deeply curious person with broad research interests spanning quantum physics, space physics, and finance.
 
-I'm also an avid musician, lover of CRPGs, and a husband and father of two. Please feel free to explore the links at the top of the site to learn more about my work and background, access my resume and CV, or review some educational primers I've written on various research topics.
+I'm also an avid musician and guitarist, lover of CRPGs, and a husband and father of two. Please feel free to explore the links at the top of the site to learn more about my work and background, access my resume and CV, or review some educational primers I've written on various research topics.
 
 PhD Defense and Recent Publications
 ======
