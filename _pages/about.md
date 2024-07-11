@@ -12,7 +12,7 @@ Before diving into computational physics, I got my bachelor’s degree in Busine
 
 I’m a deeply curious person with a broad range of interests spanning quantum mechanics and space physics, finance and investments, programming and AI, and and social media and big data. I'm also an avid musician and guitarist, lover of CRPGs, and a husband and father of two. Please feel free to explore the links at the top of the site to learn more about my work and background, access my resume and CV, and review some educational primers I've written on my research topics. 
 
-<span style ="color": purple;"> **Thank you for visiting!** </span>
+<span style ="color: purple;"> **Thank you for visiting!** </span>
 
 PhD Defense and Recent Publications
 ======
