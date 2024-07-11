@@ -1,11 +1,13 @@
 ---
 permalink: /
-title: "Aaron Stahl's Personal Research Homepage"
+title: "Aaron Stahl's Research Homepage"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+
+## <span style="color: purple;"> Personal Introduction </span>
 Greetings and welcome to my personal research site! I recently completed a PhD in computational physics (May 2024) and I'm now serving as a Research Affiliate at Georgia Tech, where I collaborate with the [Magnetospheres in the Outer Solar System](https://svensimon.gatech.edu/) research group and Professor Sven Simon to study space physics within our solar system. 
 
 Before diving into computational physics, I got my bachelor’s degree in Business from USC, concentrating in Investments and Financial Markets. After graduating, I spent five years in asset management, mostly as an analyst at Strategic Investment Group, a boutique investment manager. My passion for finance never faded, so I’m also using my advanced technical background and Georgia Tech's vast resources to explore research topics in finance and investing, including using large language models and AI to model behavioral patterns in retail investors. 
