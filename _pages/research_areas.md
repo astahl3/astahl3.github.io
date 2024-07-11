@@ -10,8 +10,8 @@ My research interests span a variety of topics and disciplines, from tensor netw
 
 Please select one of the links below to learn more about my work in a particular subject:
 
-[Computational space physics](space_plasma.md)
-
 [Computational quantum physics](quantum_completion.md)
+
+[Computational space physics](space_plasma.md)
 
 Idea classification (forthcoming)
