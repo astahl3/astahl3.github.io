@@ -12,7 +12,7 @@ Greetings and welcome to my personal research site! I recently completed a PhD i
 
 Before diving into computational physics, I got my bachelor’s degree in Business from USC, concentrating in Investments and Financial Markets. After graduating, I spent five years in asset management, mostly as an analyst at Strategic Investment Group, a boutique investment manager. My passion for finance never faded, so I’m also using my technical background and Georgia Tech's vast resources to explore research topics in finance and investing, including using large language models and AI to model the behavioral patterns of retail investors. 
 
-I’m a deeply curious person with a broad range of research and professional interests, spanning portfolio management, space physics, programming and AI, and data science. I'm also an avid musician and guitarist, lover of CRPGs, and a husband and father of two. Please explore the links at the top of the site if you'd like to learn more about my work and background, access my resume and CV, or review some educational primers I've written on certain research topics. 
+I’m a deeply curious person with a broad range of research and professional interests, spanning portfolio management, space physics, programming and AI, and data science. I'm also an avid musician and guitarist, lover of CRPGs, and a husband and father of two. Please explore the links at the top of the site if you'd like to learn more about my work and background, access my resume and CV, or review some educational primers I've written on proximate research topics. 
 
 **Thank you for visiting!**
 
